@@ -1,5 +1,6 @@
 import chess.pgn
 import math
+import json
 
 pgn = open("test-game.pgn")
 
@@ -7,6 +8,16 @@ game = chess.pgn.read_game(pgn)
 
 board = game.board()
 
+
+with open("openings.json") as json_file:
+    openings = json.load(json_file)
+
+
+for o in openings:
+    if o['n'] == "Amar Gambit":
+        print(o)
+        
+"""
 for i, move in enumerate(game.main_line()):
 
     if (i % 2 == 0):
@@ -20,3 +31,4 @@ for i, move in enumerate(game.main_line()):
 
 def dumb():
     return "dumb"   
+"""
