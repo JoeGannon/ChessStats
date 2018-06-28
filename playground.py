@@ -16,3 +16,7 @@ for i, move in enumerate(game.main_line()):
     board.push(move)                      
     print (board.fen())
     print ("")
+
+
+def dumb():
+    return "dumb"   
